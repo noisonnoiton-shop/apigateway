@@ -16,21 +16,21 @@ zuul:
   routes:
     js-account-service:
       service-id: js-account-service
-      url: http://20.194.18.209:8180
+      url: http://account.skcc.co.kr
       path: /account/**
     js-cart-service:
       service-id: js-cart-service
-      url: http://20.194.18.209:8181
+      url: http://cart.skcc.co.kr
       path: /cart/**
     js-order-service:
       service-id: js-order-service
-      url: http://20.194.18.209:8182
+      url: http://order.skcc.co.kr
       path: /order/**
     js-payment-service:
       service-id: js-payment-service
-      url: http://20.194.18.209:8183
+      url: http://payment.skcc.co.kr
       path: /payment/**
     js-product-service:
       service-id: js-product-service
-      url: http://20.194.18.209:8184
+      url: http://product.skcc.co.kr
       path: /product/**
