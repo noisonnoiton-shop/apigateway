@@ -4,18 +4,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
-
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 
+import org.springframework.stereotype.Component;
+
 @Component
 public class TxIdPreFilter extends ZuulFilter{
-	
-	private static final Logger log = LoggerFactory.getLogger(TxIdPreFilter.class);
 
 	@Override
 	public boolean shouldFilter() {
