@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: awesome-apigateway-service
+  config:
+    import: 
+      - optional:application-prd.yml
 
 management:
   endpoints:
