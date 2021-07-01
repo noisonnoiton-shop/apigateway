@@ -1,6 +1,13 @@
 server:
   port: 8090
 
+
+logging:
+  level:
+    com.amazonaws.xray: DEBUG
+    org.springframework.boot: INFO
+    org.springframework.core : INFO
+
 spring:
   application:
     name: awesome-apigateway-service
