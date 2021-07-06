@@ -25,8 +25,8 @@ public class AWSXrayConfig {
 	@PostConstruct
 	public void init() {
 		AWSXRayRecorderBuilder builder = AWSXRayRecorderBuilder.standard().withPlugin(new EC2Plugin()).withPlugin(new EKSPlugin());
-		// URL ruleFile = AWSXrayConfig.class.getResource("/xray-sampling-rules/sampling-rules.json");
-		// builder.withSamplingStrategy(new LocalizedSamplingStrategy(ruleFile));
+		URL ruleFile = AWSXrayConfig.class.getResource("/xray-sampling-rules/sampling-rules.json");
+		builder.withSamplingStrategy(new LocalizedSamplingStrategy(ruleFile));
 		builder.withContextMissingStrategy(new IgnoreContextMissingStrategy());
 		builder.withStreamingStrategy(new DefaultStreamingStrategy(30));
 		AWSXRayRecorder globalRecorder = builder.build();
