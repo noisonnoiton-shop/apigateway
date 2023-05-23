@@ -15,6 +15,17 @@ spring:
     import: 
       - optional:application-prd.yml
 
+  # sleuth:
+  #   otel:
+  #     config:
+  #       trace-id-ratio-based: 100
+  #     exporter:
+  #       otlp:
+  #         endpoint: http://collector:4317
+
+
+
+
 management:
   endpoints:
     web:
